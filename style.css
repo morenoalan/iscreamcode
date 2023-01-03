@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    outline: none;
 }
 :root {
     --size-text: 12pt;
@@ -214,6 +215,17 @@ ol {
     width: calc(100% - 30px);
     margin-left: 20px;
     background-color: var(--color-purple-four);
+}
+.container-console-input textarea {
+    background-color: transparent;
+    color: var(--color-white);
+    border: none;
+    height: 30px;
+    width: 100%;
+    resize: none;
+    padding-bottom: 3px;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 12px;
 }
 .alert {
     width: 100%;

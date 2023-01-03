@@ -65,7 +65,9 @@
                     <li class='button-container-bar button filter-behind display-none' onclick='BoxSettings(this);'>&#9881;</li>
                 </ol>
                 <ol class='container-lines'>
-                    <li class='box-line' contenteditable="true"></li>
+                    <p class='box-line' contenteditable="true">ewr</p>
+                    <p class='box-line' contenteditable="true">fdsds</p>
+                    <p class='box-line' contenteditable="true">sdfsd</p>
                 </ol>
             </li>
             <li id='box-js' class='box'>
@@ -79,6 +81,7 @@
             </li>
         </ul>
         <div id='input-output-gap-bar' class='gap draggable-horizontal' onmousedown='DraggingBar(this);'></div>
+        <!--
         <ul id='boxes-output'>
             <li id='box-result' class='result'>
             </li>
@@ -91,7 +94,21 @@
                     <li class='box-line'></li>
                 </ol>
                 <ol class='container-console-input'>
-                    <li class='console-input' contenteditable="true"></li>
+                    <li id='console-input-line' class='console-input' contenteditable="true"></li>
+                </ol>
+            </li>
+        </ul>
+        -->
+        <ul id='boxes-output'>
+            <li id='box-result' class='result'></li>
+            <li id='console-li' class='box'>
+                <ol id='bar-console' class='container-bar draggable-vertical' onmousedown='DraggingBar(this);'>
+                    <li class='button-container-bar tab'>Console</li>
+                    <li class='button-container-bar button filter-behind' onclick='BoxSettings(this);'>&#9881;</li>
+                </ol>
+                <ol class='container-console-input'>
+                    <li></li>
+                    <textarea id='console-input' rows='1' placeholder='Type something' oninput='autoHeight(this)'></textarea>
                 </ol>
             </li>
         </ul>
