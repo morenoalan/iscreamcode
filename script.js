@@ -10,8 +10,33 @@ function View(){
     console.log('View button');
 }
 
+var screen = document.body;
+function Coordinates(e){
+    let offset = screen.getBoundingClientRect();
+    let x = e.clientX - offset.left.toFixed();
+    let y = e.clientY - offset.top.toFixed();
+    console.log(x + ', ' + y);
+}
+
+var elementDragging = '';
 function DraggingBar(element){
-    console.log(element.id +' tab');
+    elementDragging = element.id;
+    console.log(elementDragging +' is dragging');
+    onmousemove = Coordinates;
+    onmouseout = ClearCoordinates;
+    /*
+    let x = element.clientX - offset.left.toFixed();
+    let y = element.clientY - offset.top.toFixed();
+    console.log(x + ', ' + y);
+    */
+}
+
+var barJs = document.getElementById('bar-js');
+//screen.onmousedown = DraggingBar('barJs');
+
+function NoDraggingBar(){
+    console.log(elementDragging + ' is no more dragging');
+    elementDragging = '';
 }
 
 function BoxSettings(element){

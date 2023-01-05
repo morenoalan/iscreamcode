@@ -60,7 +60,7 @@
                 </ol>
             </li>
             <li id='box-css' class='box'>
-                <ol id='bar-css' class='container-bar draggable-vertical' onmousedown='DraggingBar(this);'>
+                <ol id='bar-css' class='container-bar draggable-vertical' onmousedown='DraggingBar(this);' onmouseup='NoDraggingBar()'>
                     <li class='button-container-bar tab'>CSS</li>
                     <li class='button-container-bar button filter-behind display-none' onclick='BoxSettings(this);'>&#9881;</li>
                 </ol>
@@ -74,16 +74,16 @@
                 </ol>
             </li>
             <li id='box-js' class='box'>
-                <ol id='bar-js' class='container-bar draggable-vertical' onmousedown='DraggingBar(this);'>
+                <ol id='bar-js' class='container-bar draggable-vertical' onmousedown='DraggingBar(this, "verticalMove");' onmouseup='NoDraggingBar()'>
                     <li class='button-container-bar tab'>JS</li>
-                    <li class='button-container-bar button filter-behind display-none' onclick='BoxSettings(this);'>&#9881;</li>
+                    <li class='button-container-bar button filter-behind display-none' onclick='BoxSettings(this, "verticalMove");'>&#9881;</li>
                 </ol>
                 <ol class='container-lines'>
                     <li class='box-line' contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
                 </ol>
             </li>
         </ul>
-        <div id='input-output-gap-bar' class='gap draggable-horizontal' onmousedown='DraggingBar(this);'></div>
+        <div id='input-output-gap-bar' class='gap draggable-horizontal' onmousedown='DraggingBar(this, "horizontalMove");' onmouseup='NoDraggingBar()'></div>
         <!--
         <ul id='boxes-output'>
             <li id='box-result' class='result'>
@@ -105,7 +105,7 @@
         <ul id='boxes-output'>
             <li id='box-result' class='result'></li>
             <li id='console-li' class='box'>
-                <ol id='bar-console' class='container-bar draggable-vertical' onmousedown='DraggingBar(this);'>
+                <ol id='bar-console' class='container-bar draggable-vertical' onmousedown='DraggingBar(this, "verticalMove");' onmouseup='NoDraggingBar()'>
                     <li class='button-container-bar tab'>Console</li>
                     <li class='button-container-bar button filter-behind' onclick='BoxSettings(this);'>&#9881;</li>
                 </ol>
