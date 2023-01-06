@@ -12,6 +12,7 @@ function View(){
 
 var screen = document.body;
 function Coordinates(e){
+    console.log('entrou');
     let offset = screen.getBoundingClientRect();
     let x = e.clientX - offset.left.toFixed();
     let y = e.clientY - offset.top.toFixed();
@@ -22,8 +23,19 @@ var elementDragging = '';
 function DraggingBar(element){
     elementDragging = element.id;
     console.log(elementDragging +' is dragging');
-    onmousemove = Coordinates;
-    onmouseout = ClearCoordinates;
+    window.addEventListener('mousemove', function(e) {
+        var mouse = {
+            page: {
+                x: e.pageX,
+                y: e.pageY
+            },
+            client: {
+                x: e.clientX,
+                y: e.clientY
+            }
+        };
+        console.log(mouse['page'].x + ', ' + mouse['page'].y);
+    });
     /*
     let x = element.clientX - offset.left.toFixed();
     let y = element.clientY - offset.top.toFixed();
