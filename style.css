@@ -227,6 +227,12 @@ ol {
     font-family: 'Azeret Mono', monospace;
     font-size: 12px;
 }
+.box li::selection {
+    background: var(--color-pink-one);
+}
+.box-line pre {
+    cursor: text;
+}
 .alert {
     width: 100%;
     display: flex;
@@ -281,4 +287,11 @@ footer > p > a {
 }
 .display-none {
     display: none;
+}
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
