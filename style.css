@@ -232,6 +232,7 @@ ol {
 }
 .box-line pre {
     cursor: text;
+    display: inline-block;
 }
 .alert {
     width: 100%;
